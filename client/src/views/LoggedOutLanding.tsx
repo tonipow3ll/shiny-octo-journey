@@ -7,7 +7,7 @@ const LoggedOutLanding = () => {
 
     return(
         <Container>
-            <h1>Welcome</h1>
+            <h1>Welcome to Tides</h1>
             <Login />
         </Container>
     )
