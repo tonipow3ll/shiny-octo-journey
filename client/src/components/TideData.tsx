@@ -12,14 +12,23 @@ export interface TidesI {
 export const TideData: React.FC = (): JSX.Element => { 
 
     // const [tides, setTides] = useState<TidesI[]>([])
+    // const [location, setLocation] = useState()
 
     // useEffect(() => {
     //   API.getTideData().then(res => {
-    //     console.log(res.data.heights)
+    //     console.log(res.data.station)
     //     const tideInfo = res.data.heights
     //     setTides(tideInfo)
     //   })
     // }, [])
+
+    // useEffect(() => {
+    //     API.getTideData().then(res => {
+    //     //   console.log(res.data.station)
+    //       const currentLoc = res.data.station
+    //       setLocation(currentLoc)
+    //     })
+    //   }, [])
 
     // hard coding this in for sake of testing - useState/useEffect works - just tyring to keep API calls down to prevent issues
     const tides = [
@@ -39,14 +48,18 @@ export const TideData: React.FC = (): JSX.Element => {
             "height": 0.383
         },
     ]
+    let location = "SomeLocation"
+    // {console.log(tides[0].date.substr(11,5))}
     return (
         <>
             {/* location: {res.data.station} */}
-            <h1>Location: Long Beach, Inner Harbor, California</h1>
+            <h1> {location}</h1>
+            <h2> {new Date().toDateString()}</h2>
+            
             {tides.map((tide) => {
                return  (
                    <div key={tide.dt}>
-                <h2 >Date{tide.date}</h2>
+                       <p>{tide.date.substr(11,5)}</p>
                 <p>Tide Height {tide.height}</p>
                 </div>
             )
