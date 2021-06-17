@@ -52,7 +52,9 @@ export const TideData: React.FC = (): JSX.Element => {
     // {console.log(tides[0].date.substr(11,5))}
     return (
         <>
+        {/* API only calls for 1 day, 24 hours. Currently date is set to show 'current date' only. Tide / Time data matches up, substr method to pull needed info from the 'date' string the API gives */}
             {/* location: {res.data.station} */}
+            {/* write in conditional somehwere here, or add 'class' to show red = high, blue = low */}
             <h1> {location}</h1>
             <h2> {new Date().toDateString()}</h2>
             
