@@ -11,33 +11,34 @@ export interface TidesI {
 
 export const TideData: React.FC = (): JSX.Element => { 
 
-    const [tides, setTides] = useState<TidesI[]>([])
+    // const [tides, setTides] = useState<TidesI[]>([])
 
-    useEffect(() => {
-      API.getTideData().then(res => {
-        console.log(res.data.heights)
-        const tideInfo = res.data.heights
-        setTides(tideInfo)
-      })
-    }, [])
+    // useEffect(() => {
+    //   API.getTideData().then(res => {
+    //     console.log(res.data.heights)
+    //     const tideInfo = res.data.heights
+    //     setTides(tideInfo)
+    //   })
+    // }, [])
 
-    // const tides = [
-    //     {
-    //         "dt": 1623913200,
-    //         "date": "2021-06-17T07:00+0000",
-    //         "height": 0.283
-    //     },
-    //     {
-    //         "dt": 1623915000,
-    //         "date": "2021-06-17T07:30+0000",
-    //         "height": 0.337
-    //     },
-    //     {
-    //         "dt": 1623916800,
-    //         "date": "2021-06-17T08:00+0000",
-    //         "height": 0.383
-    //     },
-    // ]
+    // hard coding this in for sake of testing - useState/useEffect works - just tyring to keep API calls down to prevent issues
+    const tides = [
+        {
+            "dt": 1623913200,
+            "date": "2021-06-17T07:00+0000",
+            "height": 0.283
+        },
+        {
+            "dt": 1623915000,
+            "date": "2021-06-17T07:30+0000",
+            "height": 0.337
+        },
+        {
+            "dt": 1623916800,
+            "date": "2021-06-17T08:00+0000",
+            "height": 0.383
+        },
+    ]
     return (
         <>
             {/* location: {res.data.station} */}
@@ -56,4 +57,3 @@ export const TideData: React.FC = (): JSX.Element => {
 }
 
 
-//  {users.filter((user: UserI) => !status ? user : user.props.intentionStatus === status).map((tile, index: number) => <UserCard key={tile.props.email} props={tile.props} eleIndex={index} arrLength={length} />)}
