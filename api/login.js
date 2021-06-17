@@ -7,7 +7,7 @@ function login(email, password, callback) {
     client.connect(function (err) {
       if (err) return callback(err);
   
-      const db = client.db('THETIDES');
+      const db = client.db('db-name');
       const users = db.collection('users');
   
       users.findOne({ email: email }, function (err, user) {
@@ -30,6 +30,7 @@ function login(email, password, callback) {
       });
     });
   }
+  
 
   // create
   function create(user, callback) {
