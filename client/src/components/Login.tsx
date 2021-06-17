@@ -7,6 +7,7 @@ const LoginButton: React.FC = (): JSX.Element => {
  
 
   const { loginWithRedirect } = useAuth0();
+
   return (
     <Button 
       onClick={() => loginWithRedirect()}
