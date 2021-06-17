@@ -11,7 +11,7 @@ const LoginButton: React.FC = (): JSX.Element => {
     <Button 
       onClick={() => loginWithRedirect()}
     >
-        Log In
+        Log In / Sign Up
     </Button>
   );
 };
