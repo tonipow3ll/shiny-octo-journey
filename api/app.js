@@ -12,6 +12,7 @@ connectDB()
 const app = express()
 const PORT = process.env.PORT || 9000;
 
+app.use(express.json())
 app.use(routes);
 
 // keeping these handy for later 

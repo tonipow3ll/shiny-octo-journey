@@ -30,7 +30,7 @@ export const TideData: React.FC = (): JSX.Element => {
     //     })
     //   }, [])
 
-    // hard coding this in for sake of testing - useState/useEffect works - just tyring to keep API calls down to prevent issues
+   // hard coding this in for sake of testing - useState/useEffect works - just tyring to keep API calls down to prevent issues
     const tides = [
         {
             "dt": 1623913200,
