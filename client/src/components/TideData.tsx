@@ -1,7 +1,13 @@
 import React, {useState, useEffect} from "react";
+// import TideLocations from './TideLocations'
+
 import API from '../utils/API'
 
 
+// LB lat/Lon 33.768321 / -118.195617
+// SC lat/lon 36.958302 / -122.016998
+// NP lat/lon 33.599998 / -117.900002
+// SD lat/lon 32.703300 / -117.235001
 
 export interface TidesI {
   dt: string,
@@ -30,6 +36,29 @@ export const TideData: React.FC = (): JSX.Element => {
     //     })
     //   }, [])
 
+    const handleChange = (event:any) => {
+        event.preventDefault();
+        console.log(event.target.value)
+      if (event.target.value === "Long Beach, CA") {
+          let lat = 33.768321
+          let lon = -122.016998
+          API.getTideByLoc(lat, lon)
+      } else if (event.target.value === 'Santa Cruz, CA') {
+        let lat = 36.958302
+        let lon = -122.016998
+        API.getTideByLoc(lat, lon)
+      } else if (event.target.value === 'Newport Beach, CA') {
+        let lat = 33.599998
+        let lon = -117.235001
+        API.getTideByLoc(lat, lon)
+      } else if (event.target.value === 'San Diego, CA') {
+        let lat = 32.703300 
+        let lon = -117.235001
+        API.getTideByLoc(lat, lon)
+      }
+    
+    }
+
    // hard coding this in for sake of testing - useState/useEffect works - just tyring to keep API calls down to prevent issues
     const tides = [
         {
@@ -49,15 +78,20 @@ export const TideData: React.FC = (): JSX.Element => {
         },
     ]
     let location = "SomeLocation"
-    // {console.log(tides[0].date.substr(11,5))}
+
     return (
         <>
+        <select onChange={handleChange}>
+            <option>Long Beach, CA</option>
+            <option>Santa Cruz, CA</option>
+            <option>Newport Beach, CA</option>
+            <option>San Diego, CA</option>
+        </select>
         {/* API only calls for 1 day, 24 hours. Currently date is set to show 'current date' only. Tide / Time data matches up, substr method to pull needed info from the 'date' string the API gives */}
             {/* location: {res.data.station} */}
             {/* write in conditional somehwere here, or add 'class' to show red = high, blue = low */}
             <h1> {location}</h1>
             <h2> {new Date().toDateString()}</h2>
-            
             {tides.map((tide) => {
                return  (
                    <div key={tide.dt}>
