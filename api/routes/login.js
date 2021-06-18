@@ -18,16 +18,6 @@ router.get('/', (req, res) => {
     })
 });
 
-// Workout.find({})
-// .then((dbWorkouts) => {
-//     console.log(dbWorkouts)
-//     res.json(dbWorkouts);
-// })
-// .catch((err) => {
-//     res.status(400).json(err);
-// });
-
-// module.exports = router;
 // WILL BE the post route for LOGIN
 
 router.post('/', async(req, res) => {
