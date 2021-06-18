@@ -62,7 +62,7 @@ export const TideData: React.FC = (): JSX.Element => {
                return  (
                    <div key={tide.dt}>
                        <p>{tide.date.substr(11,5)}</p>
-                <p>Tide Height {tide.height}</p>
+                <p>Tide Height {Math.floor(tide.height * 39.3701)}"</p>
                 </div>
             )
             })}
