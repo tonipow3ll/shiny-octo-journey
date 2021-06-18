@@ -12,29 +12,29 @@ import API from '../utils/API'
 export interface TidesI {
   dt: string,
   date: string,
-  height: string,
+  height: number,
 }
 
 export const TideData: React.FC = (): JSX.Element => { 
 
-    // const [tides, setTides] = useState<TidesI[]>([])
-    // const [location, setLocation] = useState()
+    const [tides, setTides] = useState<TidesI[]>([])
+    const [location, setLocation] = useState()
 
-    // useEffect(() => {
-    //   API.getTideData().then(res => {
-    //     console.log(res.data.station)
-    //     const tideInfo = res.data.heights
-    //     setTides(tideInfo)
-    //   })
-    // }, [])
+    useEffect(() => {
+      API.getTideData().then(res => {
+        console.log(res.data.station)
+        const tideInfo = res.data.heights
+        setTides(tideInfo)
+      })
+    }, [])
 
-    // useEffect(() => {
-    //     API.getTideData().then(res => {
-    //     //   console.log(res.data.station)
-    //       const currentLoc = res.data.station
-    //       setLocation(currentLoc)
-    //     })
-    //   }, [])
+    useEffect(() => {
+        API.getTideData().then(res => {
+        //   console.log(res.data.station)
+          const currentLoc = res.data.station
+          setLocation(currentLoc)
+        })
+      }, [])
 
     const handleChange = (event:any) => {
         event.preventDefault();
@@ -42,42 +42,62 @@ export const TideData: React.FC = (): JSX.Element => {
       if (event.target.value === "Long Beach, CA") {
           let lat = 33.768321
           let lon = -122.016998
-          API.getTideByLoc(lat, lon)
+          API.getTideByLoc(lat, lon).then(res => {
+              let tideLocInfo = res.data.heights;
+              let thisLoc = res.data.station
+              setTides(tideLocInfo)
+              setLocation(thisLoc)
+          })
       } else if (event.target.value === 'Santa Cruz, CA') {
         let lat = 36.958302
         let lon = -122.016998
-        API.getTideByLoc(lat, lon)
+        API.getTideByLoc(lat, lon).then(res => {
+            let tideLocInfo = res.data.heights;
+            let thisLoc = res.data.station
+            setTides(tideLocInfo)
+            setLocation(thisLoc)
+        })
       } else if (event.target.value === 'Newport Beach, CA') {
-        let lat = 33.599998
-        let lon = -117.235001
-        API.getTideByLoc(lat, lon)
+        let lat = 33.603298
+        let lon = -117.883003
+        API.getTideByLoc(lat, lon).then(res => {
+            let tideLocInfo = res.data.heights;
+            let thisLoc = res.data.station
+            setTides(tideLocInfo)
+            setLocation(thisLoc)
+        })
       } else if (event.target.value === 'San Diego, CA') {
         let lat = 32.703300 
         let lon = -117.235001
-        API.getTideByLoc(lat, lon)
+        API.getTideByLoc(lat, lon).then(res => {
+            let tideLocInfo = res.data.heights;
+            let thisLoc = res.data.station
+            setTides(tideLocInfo)
+            setLocation(thisLoc)
+        })
       }
     
     }
 
    // hard coding this in for sake of testing - useState/useEffect works - just tyring to keep API calls down to prevent issues
-    const tides = [
-        {
-            "dt": 1623913200,
-            "date": "2021-06-17T07:00+0000",
-            "height": 0.283
-        },
-        {
-            "dt": 1623915000,
-            "date": "2021-06-17T07:30+0000",
-            "height": 0.337
-        },
-        {
-            "dt": 1623916800,
-            "date": "2021-06-17T08:00+0000",
-            "height": 0.383
-        },
-    ]
-    let location = "SomeLocation"
+    // const tides = [
+    //     {
+    //         "dt": 1623913200,
+    //         "date": "2021-06-17T07:00+0000",
+    //         "height": 0.283
+    //     },
+    //     {
+    //         "dt": 1623915000,
+    //         "date": "2021-06-17T07:30+0000",
+    //         "height": 0.337
+    //     },
+    //     {
+    //         "dt": 1623916800,
+    //         "date": "2021-06-17T08:00+0000",
+    //         "height": 0.383
+    //     },
+    // ]
+    // let location = "SomeLocation"
 
     return (
         <>
