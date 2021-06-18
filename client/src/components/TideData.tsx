@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
+import { Card } from "react-bootstrap";
 // import TideLocations from './TideLocations'
-
+import './style.css'
 import API from '../utils/API'
 
 
@@ -17,71 +18,71 @@ export interface TidesI {
 
 export const TideData: React.FC = (): JSX.Element => { 
 
-    // const [tides, setTides] = useState<TidesI[]>([])
-    // const [location, setLocation] = useState()
+//     const [tides, setTides] = useState<TidesI[]>([])
+//     const [location, setLocation] = useState()
 
-    // useEffect(() => {
-    //   API.getTideData().then(res => {
-    //     console.log(res.data.station)
-    //     const tideInfo = res.data.heights
-    //     setTides(tideInfo)
-    //   })
-    // }, [])
+//     useEffect(() => {
+//       API.getTideData().then(res => {
+//         console.log(res.data.station)
+//         const tideInfo = res.data.heights
+//         setTides(tideInfo)
+//       })
+//     }, [])
 
-    // useEffect(() => {
-    //     API.getTideData().then(res => {
-    //     //   console.log(res.data.station)
-    //       const currentLoc = res.data.station
-    //       setLocation(currentLoc)
-    //     })
-    //   }, [])
+//     useEffect(() => {
+//         API.getTideData().then(res => {
+//         //   console.log(res.data.station)
+//           const currentLoc = res.data.station
+//           setLocation(currentLoc)
+//         })
+//       }, [])
 
     const handleChange = (event:any) => {
         console.log(event.target.value)
     }
 
-    // const handleChange = (event:any) => {
-    //     event.preventDefault();
-    //     console.log(event.target.value)
-    //   if (event.target.value === "Long Beach, CA") {
-    //       let lat = 33.768321
-    //       let lon = -122.016998
-    //       API.getTideByLoc(lat, lon).then(res => {
-    //           let tideLocInfo = res.data.heights;
-    //           let thisLoc = res.data.station
-    //           setTides(tideLocInfo)
-    //           setLocation(thisLoc)
-    //       })
-    //   } else if (event.target.value === 'Santa Cruz, CA') {
-    //     let lat = 36.958302
-    //     let lon = -122.016998
-    //     API.getTideByLoc(lat, lon).then(res => {
-    //         let tideLocInfo = res.data.heights;
-    //         let thisLoc = res.data.station
-    //         setTides(tideLocInfo)
-    //         setLocation(thisLoc)
-    //     })
-    //   } else if (event.target.value === 'Newport Beach, CA') {
-    //     let lat = 33.603298
-    //     let lon = -117.883003
-    //     API.getTideByLoc(lat, lon).then(res => {
-    //         let tideLocInfo = res.data.heights;
-    //         let thisLoc = res.data.station
-    //         setTides(tideLocInfo)
-    //         setLocation(thisLoc)
-    //     })
-    //   } else if (event.target.value === 'San Diego, CA') {
-    //     let lat = 32.703300 
-    //     let lon = -117.235001
-    //     API.getTideByLoc(lat, lon).then(res => {
-    //         let tideLocInfo = res.data.heights;
-    //         let thisLoc = res.data.station
-    //         setTides(tideLocInfo)
-    //         setLocation(thisLoc)
-    //     })
-    //   }
+//     const handleChange = (event:any) => {
+//         event.preventDefault();
+//         console.log(event.target.value)
+//       if (event.target.value === "Long Beach, CA") {
+//           let lat = 33.768321
+//           let lon = -122.016998
+//           API.getTideByLoc(lat, lon).then(res => {
+//               let tideLocInfo = res.data.heights;
+//               let thisLoc = res.data.station
+//               setTides(tideLocInfo)
+//               setLocation(thisLoc)
+//           })
+//       } else if (event.target.value === 'Santa Cruz, CA') {
+//         let lat = 36.958302
+//         let lon = -122.016998
+//         API.getTideByLoc(lat, lon).then(res => {
+//             let tideLocInfo = res.data.heights;
+//             let thisLoc = res.data.station
+//             setTides(tideLocInfo)
+//             setLocation(thisLoc)
+//         })
+//       } else if (event.target.value === 'Newport Beach, CA') {
+//         let lat = 33.603298
+//         let lon = -117.883003
+//         API.getTideByLoc(lat, lon).then(res => {
+//             let tideLocInfo = res.data.heights;
+//             let thisLoc = res.data.station
+//             setTides(tideLocInfo)
+//             setLocation(thisLoc)
+//         })
+//       } else if (event.target.value === 'San Diego, CA') {
+//         let lat = 32.703300 
+//         let lon = -117.235001
+//         API.getTideByLoc(lat, lon).then(res => {
+//             let tideLocInfo = res.data.heights;
+//             let thisLoc = res.data.station
+//             setTides(tideLocInfo)
+//             setLocation(thisLoc)
+//         })
+//       }
     
-    // }
+//     }
 
    // hard coding this in for sake of testing - useState/useEffect works - just tyring to keep API calls down to prevent issues
     const tides = [
@@ -100,6 +101,41 @@ export const TideData: React.FC = (): JSX.Element => {
             "date": "2021-06-17T08:00+0000",
             "height": 0.383
         },
+        {
+            "dt": 1623916800,
+            "date": "2021-06-17T09:00+0000",
+            "height": 0.683
+        },
+        {
+            "dt": 1623916800,
+            "date": "2021-06-17T10:00+0000",
+            "height": 0.783
+        },
+        {
+            "dt": 1623916800,
+            "date": "2021-06-17T11:00+0000",
+            "height": 0.883
+        },
+        {
+            "dt": 1623916800,
+            "date": "2021-06-17T12:00+0000",
+            "height": 0.983
+        },
+        {
+            "dt": 1623916800,
+            "date": "2021-06-17T13:00+0000",
+            "height": 0.483
+        },
+        {
+            "dt": 1623916800,
+            "date": "2021-06-17T14:00+0000",
+            "height": 0.583
+        },
+        {
+            "dt": 162391680,
+            "date": "2021-06-17T15:00+0000",
+            "height": 10
+        },
     ]
     let location = "SomeLocation"
 
@@ -114,16 +150,21 @@ export const TideData: React.FC = (): JSX.Element => {
         {/* API only calls for 1 day, 24 hours. Currently date is set to show 'current date' only. Tide / Time data matches up, substr method to pull needed info from the 'date' string the API gives */}
             {/* location: {res.data.station} */}
             {/* write in conditional somehwere here, or add 'class' to show red = high, blue = low */}
-            <h1> {location}</h1>
+            <h1 className="test"> {location}</h1>
             <h2> {new Date().toDateString()}</h2>
+            {/* <Card> */}
             {tides.map((tide) => {
-               return  (
-                   <div key={tide.dt}>
-                       <p>{tide.date.substr(11,5)}</p>
-                <p>Tide Height {Math.floor(tide.height * 39.3701)}"</p>
-                </div>
+                return  (
+                    <div className="data" key={tide.dt}>
+
+                    <Card>
+                       <Card.Title>{tide.date.substr(11,5)}</Card.Title>
+                <Card.Text>Tide Height {Math.floor(tide.height * 39.3701)}"</Card.Text>
+                </Card>
+                    </div>
             )
-            })}
+        })}
+        {/* </Card> */}
         </>
     )
 

@@ -9,14 +9,14 @@ const Navigation = () => {
     const { isAuthenticated } = useAuth0();
     return (
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">The Tides</Navbar.Brand>
+            <Navbar.Brand href="#home">Tides</Navbar.Brand>
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
 
             {isAuthenticated ? <Logout /> : <Login />}
             
             </Nav>
-                
+            {/* {isAuthenticated ? <Logout /> : <Login />} */}
             </Navbar.Collapse>
         </Navbar>
     )
