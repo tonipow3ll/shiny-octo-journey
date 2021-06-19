@@ -1,6 +1,7 @@
 # The Tides 
 ### ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
-### A simple application that shows High and Low tide data for locations in CA. 
+### A simple application that shows High and Low tide data for locations in CA.
+
 ### [View the Deployed Application Here](https://thetides.herokuapp.com/)
 
 # Table of Contents
@@ -14,18 +15,15 @@
 # Technologies
 ### `React`, `Axios`, [`World Tides API`](https://www.worldtides.info/), `Mongodb`, `Mongoose`, `Typescript`, `React-Bootstrap`, `Auth0`
 
-# Testing
-### 
 
-# Usage
-### This application was created by Toni Powell. Feel free to reach out via [email](tonipow3ll@gmail.com) or open up a GitHub issue, or pull request if there is something you would like to add. 
-
-# Credits
-### 
-
-# Contributors
-### Toni Powell
-
+# Future development features include
+### Dynamic Search Ability (search anywhere in the world)
+### "Favorite" Locations  
+### Include indoor "surf" businesses
+### Update predictions based on user location
+### High / Low Tide Graphs
+### Five day future predictions 
+### Previous days history
 
 # Contact/ General Questions:
 ### [LinkedIn](https://www.linkedin.com/in/tonipowell13)
