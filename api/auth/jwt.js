@@ -6,11 +6,11 @@ var jwks = require('jwks-rsa');
 var port = process.env.PORT || 5000;
 
 var jwtCheck = jwt({
-      secret: jwks.expressJwtSecret({
-          cache: true,
-          rateLimit: true,
-          jwksRequestsPerMinute: 5,
-          jwksUri: 'https://dev-93lf9fq4.us.auth0.com/.well-known/jwks.json'
+    secret: jwks.expressJwtSecret({
+        cache: true,
+        rateLimit: true,
+        jwksRequestsPerMinute: 5,
+        jwksUri: 'https://dev-93lf9fq4.us.auth0.com/.well-known/jwks.json'
     }),
     audience: 'http://localhost:5000/login',
     issuer: 'https://dev-93lf9fq4.us.auth0.com/',

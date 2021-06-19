@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'react-bootstrap/Image'
+import Image from 'react-bootstrap/Image';
 
 const Loading: React.FC = (): JSX.Element => {
     return (

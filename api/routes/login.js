@@ -1,9 +1,6 @@
-// const router = require('express').Router();
-const dotenv = require('dotenv')
-const User = require('../models/user')
-dotenv.config({ path: './config/.env' })
-
-// ROUTE TO HERE IS LOCALHOST:#/LOGIN
+const dotenv = require('dotenv');
+const User = require('../models/user');
+dotenv.config({ path: './config/.env' });
 
 
 const express = require('express');
@@ -18,14 +15,13 @@ router.get('/', (req, res) => {
     })
 });
 
-// WILL BE the post route for LOGIN
 
 router.post('/', async (req, res) => {
     const userProf = req.body;
     const newUser = {
         email: req.body.email
     }
-    let user = await User.findOne({email: userProf.email})
+    let user = await User.findOne({ email: userProf.email })
     if (user) {
         console.log('user found')
         res.status(200)

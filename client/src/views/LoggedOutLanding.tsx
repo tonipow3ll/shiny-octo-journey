@@ -1,11 +1,10 @@
 import React from "react";
-// import { useAuth0 } from "@auth0/auth0-react";
-import { Container } from 'react-bootstrap'
-import Login from '../components/Login'
+import { Container } from 'react-bootstrap';
+import Login from '../components/Login';
 
-const LoggedOutLanding = () => { 
+const LoggedOutLanding = () => {
 
-    return(
+    return (
         <Container>
             <h1>Welcome to Tides</h1>
             <Login />

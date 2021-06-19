@@ -5,12 +5,12 @@ import { Button } from 'react-bootstrap';
 
 
 
-const LogoutButton:React.FC = ():JSX.Element => {
+const LogoutButton: React.FC = (): JSX.Element => {
 
   const { logout } = useAuth0();
   return (
-    <Button 
-    variant="outline-info"
+    <Button
+      variant="outline-info"
       onClick={() =>
         logout({
           returnTo: window.location.origin,

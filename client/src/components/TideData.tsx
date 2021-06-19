@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Card, Row, Col } from "react-bootstrap";
-import './style.css'
-import API from '../utils/API'
+import './style.css';
+import API from '../utils/API';
 
 export interface TidesI {
     dt: string,
@@ -106,24 +106,24 @@ export const TideData: React.FC = (): JSX.Element => {
             <h1 className="test"> {location}</h1>
             <h2> {new Date().toDateString()}</h2>
             <Row xs={1} xl={1}>
-            <Col>
-                <Card>
-                    <Card.Title>High and Low tide</Card.Title>
-                {extremes.map((extreme) => {
-                    return (
-                        <>
-                            <Card.Body key={extreme.dt}>
-                            <Card.Subtitle>{extreme.date.substr(11, 5)}</Card.Subtitle>
-                            <Card.Text className={extreme.type === 'High' ? 'danger' : 'safe'}>   {extreme.type} {Math.floor(extreme.height * 39.3701)}" </Card.Text>
-                            </Card.Body>
-                    
-                        </>
-                    )
-                })}
-                </Card>
+                <Col>
+                    <Card>
+                        <Card.Title>High and Low tide</Card.Title>
+                        {extremes.map((extreme) => {
+                            return (
+                                <>
+                                    <Card.Body key={extreme.dt}>
+                                        <Card.Subtitle>{extreme.date.substr(11, 5)}</Card.Subtitle>
+                                        <Card.Text className={extreme.type === 'High' ? 'danger' : 'safe'}>   {extreme.type} {Math.floor(extreme.height * 39.3701)}" </Card.Text>
+                                    </Card.Body>
+
+                                </>
+                            )
+                        })}
+                    </Card>
                 </Col>
-                </Row>
-                <Card.Title>Hourly Tidal Predictions</Card.Title>
+            </Row>
+            <Card.Title>Hourly Tidal Predictions</Card.Title>
             <Row xs={1} md={3}>
                 {tides.map((tide) => {
                     return (
