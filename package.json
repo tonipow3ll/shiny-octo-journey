@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/tonipow3ll/shiny-octo-journey#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "typescript": "^4.3.4"
   },
   "devDependencies": {
