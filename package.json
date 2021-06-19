@@ -15,15 +15,15 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/rroyalty/bandwidth.git"
+      "url": "git+https://github.com/tonipow3ll/shiny-octo-journey"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/rroyalty/bandwidth/issues"
+      "url": "https://github.com/tonipow3ll/shiny-octo-journey/issues"
     },
-    "homepage": "https://github.com/rroyalty/bandwidth#readme",
+    "homepage": "https://github.com/tonipow3ll/shiny-octo-journey#readme",
     "dependencies": {
       "if-env": "^1.0.4",
       "typescript": "^4.2.4"
