@@ -1,36 +1,34 @@
 {
-    "name": "the-tides",
-    "version": "1.0.0",
-    "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-    "main": "./server/app.js",
-    "scripts": {
-      "start": "cd server && npm start",
-      "start:dev": "concurrently \"cd server && npm run start\" \"cd client && npm run start\"",
-      "heroku-postbuild": "cd client && npm run build",
-      "postinstall": "cd client && npm install && cd ../server && npm install"
-    },
-    "engines": {
-      "node": "12.x",
-      "npm": "6.x"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/tonipow3ll/shiny-octo-journey"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/tonipow3ll/shiny-octo-journey/issues"
-    },
-    "homepage": "https://github.com/tonipow3ll/shiny-octo-journey#readme",
-    "dependencies": {
-      "if-env": "^1.0.4",
-      "typescript": "^4.2.4"
-    },
-    "devDependencies": {
-      "concurrently": "^6.1.0"
-    }
+  "name": "the-tides",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "./api/app.js",
+  "scripts": {
+    "start": "cd api && npm start",
+    "dev": "concurrently \"cd api && npm run start\" \"cd client && npm run start\"",
+    "heroku-postbuild": "cd client && npm run build",
+    "postinstall": "cd client && npm install && cd ../api && npm install"
+  },
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonipow3ll/shiny-octo-journey.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonipow3ll/shiny-octo-journey/issues"
+  },
+  "homepage": "https://github.com/tonipow3ll/shiny-octo-journey#readme",
+  "dependencies": {
+    "if-env": "^1.0.4",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
   }
-  
-  
+}
