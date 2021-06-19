@@ -9,14 +9,9 @@ const API = {
         return axios.get(`https://www.worldtides.info/api/v2?heights&extremes&date=today&lat=${lat}&lon=${lon}&days=1&key=${process.env.REACT_APP_API}
         `);
     },
-    // getTestData: function() {
-    //     return axios.get(`https://www.worldtides.info/api/v2?extremes&date=today&lat=33.768321&lon=-118.195617&key=${process.env.REACT_APP_API}
-    //     `);
-    // },
-    // getTestByLoc: function(lat: any, lon: any) {
-    //     return axios.get(`https://www.worldtides.info/api/v2?extremes&date=today&lat=${lat}&lon=${lon}&key=${process.env.REACT_APP_API}
-    //     `);
-    // }
+    sendLocInfo: function() {
+        return axios.post(``)
+    }
 }
 
 
