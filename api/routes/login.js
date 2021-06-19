@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 
 // WILL BE the post route for LOGIN
 
-router.post('/', async(req, res) => {
+router.post('/', async (req, res) => {
     const userProf = req.body;
     const newUser = {
         email: req.body.email
