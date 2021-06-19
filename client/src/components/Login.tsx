@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { withRouter } from "react-router-dom"
+// import { withRouter } from "react-router-dom"
 import { Button } from 'react-bootstrap'
 
 const LoginButton: React.FC = (): JSX.Element => {
@@ -10,6 +10,7 @@ const LoginButton: React.FC = (): JSX.Element => {
 
   return (
     <Button 
+    variant="outline-info"
       onClick={() => loginWithRedirect()}
     >
         Log In / Sign Up
