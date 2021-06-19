@@ -14,10 +14,14 @@ router.post('/', async (req, res) => {
   const newMsg = {
       message: req.body
   }
-  let thisMsg = await Location.create({message: req.body.message}) 
-  console.log('message sent')
-  res.status(200)
-  res.json(newMsg)
+  try {
+      let thisMsg = await Location.create({message: req.body.message}) 
+      console.log('message sent')
+      res.status(200)
+      res.json(newMsg)
+  } catch (err) {
+      res.status(500).json(err)
+  }
 });
 
 

@@ -10,7 +10,7 @@ const API = {
         `);
     },
     sendLocInfo: function() {
-        return axios.post(``)
+        return axios.post(`/api/`)
     }
 }
 

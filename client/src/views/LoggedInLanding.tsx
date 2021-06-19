@@ -7,17 +7,19 @@ import Location from '../components/Location'
 const LoggedInLanding = () => {
   const user: any = useAuth0();
 
-  console.log(user.user)
   return (
     <>
-    {/* <Location /> */}
       <Container>
+        <Location />
         <h1>Welcome {user.user.nickname}</h1>
         <p>Select a location from below to see today's hourly tide height predictions, and high / lows.</p>
         <TideData />
-      </Container>
+      </Container >
+
     </>
+
   )
 }
 
 export default LoggedInLanding;
+
