@@ -6,8 +6,6 @@
 
 # Table of Contents
 ### [Technologies](#Technologies)
-### [Testing](#Testing)
-### [Contributors](#Contributors)
 ### [Contact](#Contact)
 ### [Licenses](#Licenses)
 
@@ -16,7 +14,7 @@
 ### `React`, `Axios`, [`World Tides API`](https://www.worldtides.info/), `Mongodb`, `Mongoose`, `Typescript`, `React-Bootstrap`, `Auth0`
 
 
-# Future development features include
+# Future Development
 ### Dynamic Search Ability (search anywhere in the world)
 ### "Favorite" Locations  
 ### Include indoor "surf" businesses
