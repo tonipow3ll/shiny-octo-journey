@@ -10,7 +10,7 @@ const bcrypt = require('bcrypt');
 
 router.get('/', (req, res) => {
     User.find({}).then((user) => {
-        console.log(user)
+        // console.log(user)
         res.json(user)
     })
 });
@@ -23,12 +23,12 @@ router.post('/', async (req, res) => {
     }
     let user = await User.findOne({ email: userProf.email })
     if (user) {
-        console.log('user found')
+        // console.log('user found')
         res.status(200)
         res.json(user)
     } else {
         user = await User.create(newUser)
-        console.log('user created')
+        // console.log('user created')
         res.status(200)
         res.json(user)
     }

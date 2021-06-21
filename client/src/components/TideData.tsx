@@ -23,7 +23,7 @@ export const TideData: React.FC = (): JSX.Element => {
 
     useEffect(() => {
         API.getTideData().then(res => {
-            console.log(res.data.station)
+            // console.log(res.data.station)
             const tideInfo = res.data.heights
             setTides(tideInfo)
         })
@@ -38,7 +38,7 @@ export const TideData: React.FC = (): JSX.Element => {
 
     useEffect(() => {
         API.getTideData().then(res => {
-            console.log(res.data.station)
+            // console.log(res.data.station)
             const hiLow = res.data.extremes;
             setExtremes(hiLow)
         })
@@ -46,7 +46,7 @@ export const TideData: React.FC = (): JSX.Element => {
 
     const handleChange = (event: any) => {
         event.preventDefault();
-        console.log(event.target.value)
+        // console.log(event.target.value)
         if (event.target.value === "Long Beach, CA") {
             let lat = 33.768321
             let lon = -122.016998
