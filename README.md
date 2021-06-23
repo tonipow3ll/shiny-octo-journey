@@ -5,23 +5,30 @@
 ### [View the Deployed Application Here](https://thetides.herokuapp.com/)
 
 # Table of Contents
-### [Technologies](#Technologies)
-### [Contact](#Contact)
-### [Licenses](#Licenses)
+[Technologies](#Technologies)
+[Contact](#Contact)
+[Licenses](#Licenses)
 
 
 # Technologies
-### `React`, `Axios`, [`World Tides API`](https://www.worldtides.info/), `Mongodb`, `Mongoose`, `Typescript`, `React-Bootstrap`, `Auth0`
+`React`  
+`Axios`  
+[`World Tides API`](https://www.worldtides.info/)  
+ `Mongodb`  
+ `Mongoose`  
+`Typescript`  
+`React-Bootstrap`  
+`Auth0`
 
 
 # Future Development
-### Dynamic Search Ability (search anywhere in the world)
-### "Favorite" Locations  
-### Include indoor "surf" businesses
-### Update predictions based on user location
-### High / Low Tide Graphs
-### Five day future predictions 
-### Previous days history
+Dynamic Search Ability (search anywhere in the world)  
+"Favorite" Locations  
+Include indoor "surf" businesses
+Update predictions based on user location  
+High / Low Tide Graphs
+Five day future predictions   
+Previous days history
 
 # Contact/ General Questions:
 ### [LinkedIn](https://www.linkedin.com/in/tonipowell13)
